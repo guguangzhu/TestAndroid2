@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.testandroid2"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TextInputActivity"
+            android:label="@string/title_activity_text_input"/>
+        <activity
+            android:name=".CollapsingActivity"
+            android:label="@string/title_activity_collapsing"
+            android:theme="@style/AppTheme.TransparentActivity"/>
+        <activity
+            android:name=".ViewPagerActivity"
+            android:label="@string/title_activity_view_pager"/>
+        <activity
+            android:name=".DialogPlusActivity"
+            android:label="@string/title_activity_dialog_plus"/>
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.TransparentActivity"/>
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".NewsContentActivity"
+            android:label="@string/title_activity_news_content"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".AutoHideTitleActivity"/>
+        <activity
+            android:name=".RadarActivity"
+            android:label="@string/title_activity_radar"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".TagCloudActivity"
+            android:label="@string/title_activity_tag_cloud"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".LightSensorActivity"
+            android:label="@string/title_activity_light_sensor"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DragActivity"
+            android:label="@string/title_activity_drag"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".ProgressActivity"/>
+        <activity android:name=".HttpsActivity"/>
+        <activity android:name=".UUIDActivity"/>
+        <activity android:name=".SeekBarActivity"/>
+        <activity android:name=".NewProgressActivity"/>
+
+        <receiver android:name=".widget.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info"/>
+        </receiver>
+
+        <activity android:name=".ViewAnimationActivity">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_indicator"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:text="100"
+        android:textColor="@color/material_green_A200"
+        android:drawableBottom="@drawable/ic_orange_arrow_down"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="5dp"/>
+        <com.example.testandroid2.widget.MySeekBar
+            android:id="@+id/seek_bar"
+            android:layout_marginTop="10dp"
+            android:thumb="@drawable/ic_seek_bar_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

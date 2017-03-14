@@ -1,0 +1,62 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+
+
+        <!-- customize the color palette -->
+        <item name="colorPrimary">@color/material_blue_500</item>
+        <item name="colorPrimaryDark">@color/material_blue_700</item>
+        <item name="colorAccent">@color/material_green_A200</item>
+
+
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!--
+    Background for the search query section (e.g. EditText)  
+    <item name="queryBackground">...</item>  
+    Background for the actions section (e.g. voice, submit)  
+    <item name="submitBackground">...</item>  
+    Close button icon  
+    <item name="closeIcon">...</item>  
+    Search button icon  
+    <item name="searchIcon">...</item>  
+    Go/commit button icon  
+    <item name="goIcon">...</item>  
+    Voice search button icon  
+    <item name="voiceIcon">...</item>  
+    Commit icon shown in the query suggestion row  
+    <item name="commitIcon">...</item>  
+    Layout for query suggestion rows  
+    <item name="suggestionRowLayout">...</item>  
+        -->
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppTheme.TransparentActivity" parent="AppBaseTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+</resources>
