@@ -11,13 +11,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.lzy.imagepicker.ImagePicker;
-import com.lzy.imagepicker.R;
-import com.lzy.imagepicker.Utils;
-import com.lzy.imagepicker.bean.ImageItem;
-import com.lzy.imagepicker.ui.ImageBaseActivity;
-import com.lzy.imagepicker.ui.ImageGridActivity;
-import com.lzy.imagepicker.view.SuperCheckBox;
+import com.guge.myimagepicker.MyImagePicker;
+import com.guge.myimagepicker.R;
+import com.guge.myimagepicker.bean.ImageItem;
+import com.guge.myimagepicker.ui.GalleryActivity;
+import com.guge.myimagepicker.ui.ImageBaseActivity;
+import com.guge.myimagepicker.util.Utils;
+import com.guge.myimagepicker.view.SuperCheckBox;
 
 import java.util.ArrayList;
 
@@ -35,7 +35,7 @@ public class ImageGridAdapter extends BaseAdapter {
     private static final int ITEM_TYPE_CAMERA = 0;  //第一个条目是相机
     private static final int ITEM_TYPE_NORMAL = 1;  //第一个条目不是相机
 
-    private ImagePicker imagePicker;
+    private MyImagePicker imagePicker;
     private Activity mActivity;
     private ArrayList<ImageItem> images;       //当前需要显示的所有的图片数据
     private ArrayList<ImageItem> mSelectedImages; //全局保存的已经选中的图片数据
@@ -49,7 +49,7 @@ public class ImageGridAdapter extends BaseAdapter {
         else this.images = images;
 
         mImageSize = Utils.getImageItemWidth(mActivity);
-        imagePicker = ImagePicker.getInstance();
+        imagePicker = MyImagePicker.getInstance();
         isShowCamera = imagePicker.isShowCamera();
         mSelectedImages = imagePicker.getSelectedImages();
     }
@@ -102,9 +102,9 @@ public class ImageGridAdapter extends BaseAdapter {
                 @Override
                 public void onClick(View v) {
                     if (!((ImageBaseActivity) mActivity).checkPermission(Manifest.permission.CAMERA)) {
-                        ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.CAMERA}, ImageGridActivity.REQUEST_PERMISSION_CAMERA);
+                        ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.CAMERA}, GalleryActivity.REQUEST_PERMISSION_CAMERA);
                     } else {
-                        imagePicker.takePicture(mActivity, ImagePicker.REQUEST_CODE_TAKE);
+                        imagePicker.takePicture(mActivity, MyImagePicker.REQUEST_CODE_TAKE);
                     }
                 }
             });

@@ -7,10 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.guge.myimagepicker.MyImagePicker;
 import com.guge.myimagepicker.bean.ImageItem;
 import com.guge.myimagepicker.util.Utils;
 
 import java.util.ArrayList;
+
+import uk.co.senab.photoview.PhotoView;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 
 /**
@@ -26,7 +30,7 @@ public class ImagePageAdapter extends PagerAdapter {
 
     private int screenWidth;
     private int screenHeight;
-    private ImagePicker imagePicker;
+    private MyImagePicker imagePicker;
     private ArrayList<ImageItem> images = new ArrayList<>();
     private Activity mActivity;
     public PhotoViewClickListener listener;
@@ -38,7 +42,7 @@ public class ImagePageAdapter extends PagerAdapter {
         DisplayMetrics dm = Utils.getScreenPix(activity);
         screenWidth = dm.widthPixels;
         screenHeight = dm.heightPixels;
-        imagePicker = ImagePicker.getInstance();
+        imagePicker = MyImagePicker.getInstance();
     }
 
     public void setData(ArrayList<ImageItem> images) {

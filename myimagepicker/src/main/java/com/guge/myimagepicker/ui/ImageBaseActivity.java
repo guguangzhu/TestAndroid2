@@ -38,7 +38,7 @@ public class ImageBaseActivity extends AppCompatActivity {
         tintManager.setStatusBarTintResource(R.color.status_bar);  //设置上方状态栏的颜色
     }
 
-    @TargetApi(19)
+    @TargetApi(22)
     private void setTranslucentStatus(boolean on) {
         Window win = getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();

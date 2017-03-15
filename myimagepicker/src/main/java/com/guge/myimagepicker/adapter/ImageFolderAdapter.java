@@ -9,10 +9,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lzy.imagepicker.ImagePicker;
-import com.lzy.imagepicker.R;
-import com.lzy.imagepicker.Utils;
-import com.lzy.imagepicker.bean.ImageFolder;
+import com.guge.myimagepicker.MyImagePicker;
+import com.guge.myimagepicker.R;
+import com.guge.myimagepicker.bean.ImageFolder;
+import com.guge.myimagepicker.util.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ import java.util.List;
  */
 public class ImageFolderAdapter extends BaseAdapter {
 
-    private ImagePicker imagePicker;
+    private MyImagePicker imagePicker;
     private Activity mActivity;
     private LayoutInflater mInflater;
     private int mImageSize;
@@ -40,7 +40,7 @@ public class ImageFolderAdapter extends BaseAdapter {
         if (folders != null && folders.size() > 0) imageFolders = folders;
         else imageFolders = new ArrayList<>();
 
-        imagePicker = ImagePicker.getInstance();
+        imagePicker = MyImagePicker.getInstance();
         mImageSize = Utils.getImageItemWidth(mActivity);
         mInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
