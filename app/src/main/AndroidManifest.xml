@@ -78,6 +78,7 @@
         <activity android:name=".UUIDActivity"/>
         <activity android:name=".SeekBarActivity"/>
         <activity android:name=".NewProgressActivity"/>
+        <activity android:name=".ImagePickerActivity"/>
 
         <receiver android:name=".widget.NewAppWidget">
             <intent-filter>

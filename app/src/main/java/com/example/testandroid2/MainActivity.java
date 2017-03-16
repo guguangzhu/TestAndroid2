@@ -181,6 +181,10 @@ public class MainActivity extends AppCompatActivity implements
                 mDatas.add("NewProgressActivity");
                 continue;
             }
+            if (i == 16) {
+                mDatas.add("ImagePickerActivity");
+                continue;
+            }
 
 
             mDatas.add("" + i);
@@ -284,6 +288,10 @@ public class MainActivity extends AppCompatActivity implements
             break;
             case 15: {
                 intent = new Intent(this, NewProgressActivity.class);
+            }
+            break;
+            case 16: {
+                intent = new Intent(this, ImagePickerActivity.class);
             }
             break;
 

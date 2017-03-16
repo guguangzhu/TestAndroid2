@@ -73,7 +73,9 @@ public class GalleryActivity extends ImageBaseActivity implements ImageDataSourc
         mImageGridAdapter = new ImageGridAdapter(this, null);
         mImageFolderAdapter = new ImageFolderAdapter(this, null);
 
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+        onImageSelected(0, null, false);
+
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN) {
             if (checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 new ImageDataSource(this, null, this);
             } else {
