@@ -15,6 +15,10 @@ public enum Task {
 	LATEST_NEWS(0x000000001, "最新新闻", HttpConfig.URL + "news/latest", HttpConfig.GET,new TypeToken<NewsBean>() {
 	}.getType()),
 	TEST_HTTPS(0x000000002, "https测试", "https://kyfw.12306.cn/otn/leftTicket/query", HttpConfig.GET,new TypeToken<TicketsBean>() {
+	}.getType()),
+	TEST_HTTP_2(0x000000003, "https测试", "http://101.201.116.119:5645/popularityRank/getList?bookType=&rankType=1&pageNum=1&pageSize=20&classificationType=&classificationId=&press=&yearStart=&desc=0&yearEnd=&keyword=888878&upYearStartVal=&upYearEndVal=", HttpConfig.GET,new TypeToken<TicketsBean>() {
+	}.getType()),
+	TEST_REQUEST(0x000000004, "http测试", "http://101.201.116.210:7726/popularityRank/getList?pageNum=1&pageSize=15", HttpConfig.GET,new TypeToken<TicketsBean>() {
 	}.getType());
 
 	private int taskID;

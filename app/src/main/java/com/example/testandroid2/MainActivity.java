@@ -2,6 +2,7 @@ package com.example.testandroid2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -93,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements
         //mRecyclerView.setAdapter(adapter).setOnItemClickLitener(this));
         initMixPanel();
         addAction();
-
     }
 
     private void initMixPanel(){
@@ -183,6 +183,10 @@ public class MainActivity extends AppCompatActivity implements
             }
             if (i == 16) {
                 mDatas.add("ImagePickerActivity");
+                continue;
+            }
+            if (i == 17) {
+                mDatas.add("BlueToothActivity");
                 continue;
             }
 
@@ -292,6 +296,10 @@ public class MainActivity extends AppCompatActivity implements
             break;
             case 16: {
                 intent = new Intent(this, ImagePickerActivity.class);
+            }
+            break;
+            case 17: {
+                intent = new Intent(this, BlueToothActivity.class);
             }
             break;
 

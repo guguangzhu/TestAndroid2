@@ -42,7 +42,7 @@ public class NewProgressActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_progress);
-//        getData();
+        getData();
 //        initManager();
 //        initLocationManager();
         NewProgressActivityPermissionsDispatcher.initLocationManagerWithCheck(this);
@@ -129,7 +129,8 @@ public class NewProgressActivity extends BaseActivity {
 
     private void getData() {
 
-        RequestQueue.addToRxQueus(this,this,observable, true, Task.LATEST_NEWS, null);
+//        RequestQueue.addToRxQueus(this,this,observable, true, Task.LATEST_NEWS, null);
+        RequestQueue.addToRxQueus(this,this,observable, true, Task.TEST_HTTP_2, null);
     }
 
     @Override
@@ -140,6 +141,9 @@ public class NewProgressActivity extends BaseActivity {
             case LATEST_NEWS:
                 NewsBean bean= (NewsBean) resultBean.getData();
                 Timber.e(bean.getDate());
+                break;
+            case TEST_REQUEST:
+
                 break;
         }
     }

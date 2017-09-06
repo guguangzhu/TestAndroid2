@@ -10,7 +10,7 @@ android {
         targetSdkVersion 24
 
         // ndk配置 start
-        ndk{
+        ndk {
             moduleName "mylibSo"//这个就是以后导出库文件时 so文件的名称
         }
         // ndk配置 end
@@ -21,8 +21,8 @@ android {
 
     // ndk配置 start
     sourceSets {
-        main{
-            jniLibs.srcDirs=[]
+        main {
+            jniLibs.srcDirs = []
         }
     }
     // ndk配置 end
@@ -37,6 +37,7 @@ android {
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
+    compile project(':myimagepicker')
     compile 'com.android.support:support-v4:24.0.0'
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support:recyclerview-v7:24.0.0'
@@ -53,10 +54,10 @@ dependencies {
     compile 'io.reactivex.rxjava2:rxjava:2.0.5'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'com.jakewharton.timber:timber:4.5.1'
-    testCompile 'junit:junit:4.12'
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
-    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
     compile 'com.mixpanel.android:mixpanel-android:4.9.7'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile project(':myimagepicker')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
 }
